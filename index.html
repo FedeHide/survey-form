@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form | freeCodeCamp</title>
+</head>
+<body>
+    <section class="container">
+        <h1 id="title" class="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Registration</p>
+        <form id="survey-form" action="#">
+            <!--user data inputs-->
+            <div class="user">
+                <div class="input-box">
+                    <label for="name" id="name-label" class="details">Full Name</label>
+                    <input id="name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <label for="username" id="username-label" class="details">Username</label>
+                    <input id="username" type="text" placeholder="Enter your Username" required>
+                </div>
+                <div class="input-box">
+                    <label for="email" id="email-label" class="details">Email</label>
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <label for="number" id="number-label" class="details">Age</label>
+                    <input id="number" type="number" placeholder="age" min="10" max="99" required>
+                </div>
+            </div>
+            <!--gender input radios-->
+            <div class="gender-details">
+                <input value="male" type="radio" name="gender" id="dot-1">
+                <input value="female" type="radio" name="gender" id="dot-2">
+                <input value="prefer not to say" type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div>
+            <!--dropdown-->
+            <div id="dropdown-box" class="dropdown-box">
+                <p class="dropdown-title">How did you hear about us</p>
+                <select name="role" id="dropdown" placeholder="asfasf" required>
+                    <option selected disabled value="">Select an option</option>
+                    <option value="facekook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="youtube">Youtube</option>
+                    <option value="web">Web</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <!--checkbox-->
+            <div class="checkbox-box">
+                <p class="checkbox-title">Select one or more options of your interest</p>
+                <label for="software-development">
+                    <input type="checkbox" name="software-development" id="software-development" value="software-development" class="">
+                Sofware Development</label>
+                <label for="backend">
+                    <input type="checkbox" name="backend" id="backend" value="backend" class="">
+                Backend</label>
+                <label for="data-science">
+                    <input type="checkbox" name="data-science" id="data-science" value="data-science" class="">
+                Data Science</label>
+                <label for="cybersecurity">
+                    <input type="checkbox" name="cybersecurity" id="cybersecurity" value="cybersecurity" class="">
+                Cybersecurity</label>
+            </div>
+            <!--textarea-->
+            <div class="textarea-box">
+                <p class="textarea-title">Any comments or suggestions?</p>
+                <textarea placeholder="Enter your comment here..." name="textarea" id="textarea" cols="30" rows="10"></textarea>
+            </div>
+            <!--submit button-->
+            <div type="submit" class="btn">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
