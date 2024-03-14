@@ -5,7 +5,7 @@ export const metadata: Metadata = {
 	title: 'Survey Form | freeCodeCamp',
 	description: 'This is a simple html-css based survey form, a freecodecamp assignment',
 	openGraph: {
-		url: 'https://survey-form.vercel.app',
+		url: 'https://survey-form-sepia.vercel.app/',
 		type: 'website',
 		title: 'Survey Form | freeCodeCamp',
 		description: 'This is a simple html-css based survey form, a freecodecamp assignment',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		site: 'https://survey-form.vercel.app',
+		site: 'https://survey-form-sepia.vercel.app/',
 	},
 }
 
