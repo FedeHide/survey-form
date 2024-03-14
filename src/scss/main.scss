@@ -1,0 +1,259 @@
+@forward 'base/';
+@forward 'layout/';
+@forward 'utils/';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--background-primary: #71b7e6;
+	--background-secondary: #9b59b6;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background: linear-gradient(135deg, var(--background-primary), var(--background-secondary));
+}
+
+.container {
+	max-width: 700px;
+	width: 100%;
+	background: #fff;
+	padding: 25px 30px;
+	border-radius: 5px;
+	position: relative;
+}
+
+/* title */
+
+.container .title {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.container .title::before {
+	content: '';
+	position: absolute;
+	top: 56px;
+	left: 32px;
+	height: 3px;
+	width: 30px;
+	background: linear-gradient(135deg, var(--background-primary), var(--background-secondary));
+}
+
+#description {
+	font-size: 15px;
+	font-style: italic;
+}
+
+/* user */
+
+.container form .user {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 30px 0 12px 0;
+}
+
+form .user .input-box,
+form .dropdown-box select {
+	margin-bottom: 15px;
+	width: calc(100% / 2 - 20px);
+}
+
+.user .input-box .details,
+form .dropdown-box select {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+.user .input-box input,
+form .dropdown-box select {
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 16px;
+	border-bottom-width: 2px;
+}
+
+.user .input-box input:focus,
+.user .input-box input:valid,
+form .dropdown-box select:focus,
+form .dropdown-box select:valid {
+	border-color: var(--background-secondary);
+	transition: all 0.3s ease;
+}
+
+form .dropdown-box select:first-child {
+	border: 1px solid #ccc;
+}
+
+/* gender */
+
+form .gender-details,
+.dropdown-title,
+.checkbox-title,
+.textarea-title {
+	font-size: 20px;
+	font-weight: 500;
+	user-select: none;
+}
+
+.gender {
+	font-style: italic;
+	font-weight: 200;
+}
+
+form .gender-details .category {
+	display: flex;
+	justify-content: space-between;
+	width: 88%;
+	margin: 14px 0;
+}
+
+.gender-details .category label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.gender-details .category .dot {
+	height: 18px;
+	width: 18px;
+	background-color: #d9d9d9;
+	border-radius: 50%;
+	margin-right: 10px;
+	border: 5px solid transparent;
+	transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+	border-color: #d9d9d9;
+	background: var(--background-secondary);
+}
+
+form input[type='radio'] {
+	display: none;
+}
+
+.gender-details,
+.dropdown-box,
+.category {
+	margin: 25px 0;
+}
+
+/* dropdown */
+
+.dropdown-title {
+	padding-bottom: 10px;
+}
+
+#dropdown {
+	color: #0b1e31;
+}
+
+/* checkbox */
+
+.checkbox-box {
+	padding: 20px 0;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.checkbox-box label,
+.checkbox-box label input {
+	font-style: italic;
+	cursor: pointer;
+	user-select: none;
+	margin-right: 5px;
+}
+
+/*textarea*/
+
+.textarea-title {
+	margin: 20px 0 15px 0;
+}
+
+#textarea {
+	min-height: 120px;
+	width: 100%;
+	padding: 10px 10px;
+	resize: vertical;
+	font-size: 15px;
+}
+
+#textarea:focus {
+	outline: none;
+	border: 2px solid var(--background-secondary);
+}
+
+/*button */
+
+form .btn {
+	height: 45px;
+	margin: 45px 0;
+}
+
+form .btn button {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	background: linear-gradient(135deg, var(--background-primary), var(--background-secondary));
+}
+
+form .btn button:hover {
+	background: linear-gradient(-135deg, var(--background-primary), var(--background-secondary));
+	cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 548px) {
+	.container {
+		max-width: 100%;
+	}
+
+	form .user .input-box {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+
+	form .gender-details .category {
+		width: 100%;
+	}
+
+	.container form .user {
+		max-height: 400px;
+		overflow-y: scroll;
+	}
+
+	.user::-webkit-scrollbar {
+		width: 0;
+	}
+
+	form .gender-details .category {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
