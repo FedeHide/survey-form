@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 import '../scss/main.scss'
 
 export const metadata: Metadata = {
+	icons: {
+		icon: [
+			'/public/favicon.png',
+			'../../public/favicon-16x16.png',
+			'../../public/favicon-32x32.png',
+		],
+		apple: '../../public/apple-touch-icon.png',
+	},
 	title: 'Survey Form | freeCodeCamp',
 	description: 'This is a simple html-css based survey form, a freecodecamp assignment',
 	openGraph: {
