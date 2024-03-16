@@ -2,9 +2,15 @@
 
 ### Check the site [Here](https://survey-form-sepia.vercel.app/ " Survey-form")
 
-------------
+## Introduction
+This is a simple survey form, a freecodecamp assignment.
 
-[![survey-form1.gif](https://i.postimg.cc/9FfBzDBk/survey-form1.gif)](https://postimg.cc/qg9K5MSc)
+## Technologies Used
+<div>
+	<a href="https://skillicons.dev">
+		<img src="https://skillicons.dev/icons?i=nextjs,ts,sass" />
+	</a>
+</div>
 
 ------------
 
