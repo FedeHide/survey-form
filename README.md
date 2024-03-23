@@ -14,6 +14,6 @@ This is a simple survey form, a freecodecamp assignment.
 
 ------------
 
-[![survey-form2.gif](https://i.postimg.cc/Pfy4tW1Z/survey-form2.gif)](https://postimg.cc/MXcR5jPK)
+[![survey-form2.gif](https://raw.githubusercontent.com/FedeHide/survey-form/main/public/assets/survey-form2.gif)](https://survey-form-sepia.vercel.app/)
 
 > This is a [freecodecamp](http://https://www.freecodecamp.org/learn/ "freecodecamp") assignment. All the projects and contact details given are **not real**.
